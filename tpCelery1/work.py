@@ -4,7 +4,7 @@ import os
 
 app = Celery(
     'tpcelery1',
-    broker='amqp://guest:guest@192.168.1.254/',
+    broker='amqp://guest:guest@localhost/',
     backend='rpc://'
 )
 
