@@ -25,10 +25,13 @@ Prerequisites:
 
     NB: Don't forget to bind the ports if you are using a docker image
 
-    example: docker run -d -p 5672:5672 -p 15672:15672 --name rabbitmq rabbitmq:management
+        docker run -d -p 5672:5672 -p 15672:15672 --name rabbitmq rabbitmq:management
 
 2. Start your Celery worker with the following command
 
-    bash celery -A tpCelery1.work worker -l info -P  gevent
+    celery -A tpCelery1.work worker -l info -P  gevent 
 
-3. Start your main file in this case (run.py) and watch the magic
+    !Important to be out of the tpCelery1 directory while running this!
+
+3. Start your main file in this case (run.py)
+    
